@@ -28,7 +28,6 @@ public class AuthorizeFilter implements GlobalFilter {
         //4.1 禁止访问
         System.out.println("master test");
         exchange.getResponse().setStatusCode(HttpStatus.FORBIDDEN);
-        System.out.println("hot-fix test");
         return exchange.getResponse().setComplete();
     }
 }
