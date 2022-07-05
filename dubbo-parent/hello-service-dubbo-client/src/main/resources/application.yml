@@ -1,0 +1,11 @@
+dubbo:
+  registry:
+    # 挂载到 Spring Cloud 注册中心
+    address: spring-cloud://localhost
+  cloud:
+    subscribed-services: hello-service #服务提供者的application.name
+server:
+  port: 9002
+spring:
+  application:
+    name: dubbo-client

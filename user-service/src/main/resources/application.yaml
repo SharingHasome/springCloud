@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql:///cloud_user?serverTimezone=Asia/Shanghai
+  cloud:
+    nacos:
+      discovery:
+        cluster-name: SH
+#        ephemeral: false #设置非临时示例
+#        namespace: 36335780-4d5c-48c8-9317-a5f913195bcc #命名空间 填Id
+server:
+  port: 8081
+logging:
+  level:
+    com.user: DEBUG
+    org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: trace
+    org:
+      springframework:
+        web:
+          servlet:
+            DispatcherServlet: DEBUG
